@@ -75,21 +75,25 @@ public class HomeController : Controller
         return GetMaleMembers(GetList());
     }
 
+    //url: localhost:port/NashTech/Home/OldestPerson
     public PersonModel OldestPerson()
     {
         return GetOldestMember(GetList());
     }
 
+    //url: localhost:port/NashTech/Home/FullnamePersons
     public List<string> FullnamePersons()
     {
         return GetFullNameList(GetList());
     }
 
+    //url: localhost:port/NashTech/Home/Get3Lists
     public List<List<PersonModel>> Get3Lists()
     {
         return List3(GetList());
     }
 
+    //url: localhost:port/NashTech/Home/DownloadFile
     public FileResult DownloadFile(){
         return File("Assets/Person.xlsx", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Person.xlsx");
     }
