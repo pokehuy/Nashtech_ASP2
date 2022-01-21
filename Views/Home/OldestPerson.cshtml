@@ -1,0 +1,16 @@
+﻿@using asp2.Models  
+@{
+    ViewData["Title"] = "Test";
+}
+<h1>@ViewData["Title"]</h1>
+
+@{   
+    var data = ViewBag.Message;  
+}  
+<h3>First name: @data.FristName</h3>  
+<h3>Last name: @data.LastName</h3>  
+<h3>Gender: @data.Gender</h3>   
+<h3>Date of birth: @data.DateOfBirth</h3>   
+<h3>Phone number: @data.PhoneNumber</h3>   
+<h3>Birthplace: @data.BirthPlace</h3>   
+<h3>Graduated : @data.isGraduated ? "Yes" : "No"</h3>   
